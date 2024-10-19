@@ -1,0 +1,908 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(pics/undraw_Hello_re_3evm-removebg-preview.png);
+    background-size: 60%; /* Keep the smaller size */
+    background-position: right 92%; /* Moves the image a bit down */
+    background-repeat: no-repeat;
+}
+
+.container {
+    padding: 10px 10%;
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Align items in a column */
+    height: 100%; /* Ensure container takes full height */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Make the logo smaller and align it to the left */
+.logo {
+    width: 135px; /* Size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for scaling and other effects */
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg); /* Slightly enlarge and rotate the logo */
+    filter: brightness(1.2); /* Optional: make the logo brighter on hover */
+}
+
+/* Align the navigation menu to the right */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Add space between nav items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #A6F6FF;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    color: #A6F6FF; /* Change color on hover */
+    width: 100%;
+}
+
+.text {
+    display: flex; /* Use Flexbox to align text */
+    flex-direction: column; /* Align text vertically */
+    margin-top: 20%; /* Adjust margin as needed */
+    align-items: flex-start; /* Align text to the start */
+}
+
+.text p {
+    font-size: 30px;
+}
+
+.text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.text h1 span {
+    color: #A6F6FF;
+}
+
+#about {
+    padding: 80px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Ensure space between image and text */
+    align-items: center; /* Vertically center the items */
+    flex-wrap: wrap; /* Wrap content for smaller screens */
+}
+
+.col1 {
+    flex-basis: 55%; /* Adjust this width as needed */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-start; /* Align items to the start (left) */
+    margin-left: -140px; /* Adjust this value to move the image further left */
+}
+
+
+.col1 img {
+    width: 100%; /* Keep the image responsive */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    border-radius: 15px; /* Rounded corners */
+    margin: 0; /* Reset margin */
+    object-fit: cover; /* Ensure the image covers its container proportionally */
+}
+
+
+
+.col2 {
+    flex-basis: 50%; /* Set the text column to take the remaining width */
+    text-align: left; /* Align the text to the right */
+}
+
+
+.subtitle { 
+    font-size: 50px;
+    font-weight: 600;
+    color: #A6F6FF;
+}
+
+.col2 p {
+    color: #fff;
+}
+
+.titles{
+    display: flex;
+    margin: 20px 0px 40px;
+}
+
+.skills{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;  
+}
+
+.skills::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #A6F6FF;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.skills.link1::after{
+    width: 50%;
+}
+
+.tcontents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+/* Color all span elements within tcontents to #A6F6FF */
+.tcontents ul li span {
+    color: #A6F6FF;
+    font-size: 14px;
+}
+.tcontents{
+    display: none;
+}
+.tcontents.at{
+    display: block;
+}
+
+
+
+#services{
+    padding: 30px 0;
+}
+.serlist{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.serlist div{
+    background:#262626 ;
+    padding: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius:10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.serlist div i{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+.serlist  div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.serlist div a {
+    text-decoration: none;
+    color: #fff; /* Default color */
+    font-size: 13px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.serlist div:hover a {
+    color: #080808; /* Change the link color to black when the whole service block is hovered */
+}
+.serlist div:hover {
+    background: #A6F6FF;
+    transform: translateY(-10px);
+    color: #080808;
+}
+
+
+
+#portfolio{
+    padding: 50px 0;
+}
+
+.wlist{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+
+}
+.layer{
+    width: 100%;
+    height: 00%;
+    background: linear-gradient(rgba(0,0,0,0.5), #A6F6FF);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    color: #080808;
+    transition: height 0.5s;
+}
+.work .layer h3{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.work .layer p{
+    font-weight: 500;
+}
+.layer a{
+    margin-top:20px ;
+    color: #A6F6FF;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #080808;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    transition: background 0.3s;
+}
+.work:hover img{
+    transform:scale(1.1) ;
+}
+.work:hover .layer{
+    height: 100%;
+}
+.layer a:hover{
+    background: #fff;
+    color: #080808;
+}
+
+
+
+
+
+
+.cleft{
+    flex-basis: 35%;
+}
+.cright{
+    flex-basis: 60%;
+}
+
+.cleft p{
+    margin-top: 30px;
+}
+.cleft p i{
+    color: #A6F6FF;
+    margin-right:15px ;
+    font-size: 25px;
+}
+.sicons{
+    margin-top: 30px;
+}
+.sicons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #A6F6FF;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.sicons a:hover{
+    color: #fff;
+    transform: translateY(-5px);
+}
+.btn {
+    padding: 15px 20px; /* Ajoutez un padding pour rendre le bouton plus grand */
+    border: none; /* Supprimez la bordure */
+    border-radius: 5px; /* Ajoutez des coins arrondis */
+    font-size: 16px; /* Ajustez la taille de la police */
+    cursor: pointer; /* Changez le curseur au survol */
+    transition: background 0.3s ease, transform 0.3s ease; /* Ajoutez des transitions */
+}
+
+.btn.btn2 {
+    margin: 20px 0;
+    display: inline-block;
+    background: #A6F6FF; /* Couleur de fond initiale */
+    color: #080808; /* Couleur du texte initiale */
+    text-decoration: none;
+}
+
+.btn.btn2:hover {
+    background: #fff; /* Couleur de fond au survol */
+    color: #080808; /* Couleur du texte au survol */
+    transform: translateY(-3px); /* Effet de déplacement au survol */
+}
+
+.cright form{
+    margin-top: 110px;
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copy{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0 ;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copy i{
+    color: #A6F6FF;
+}
+nav .fas{
+    display: none;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(pics/undraw_Hello_re_3evm-removebg-preview.png);
+    background-size: 60%; /* Keep the smaller size */
+    background-position: right 92%; /* Moves the image a bit down */
+    background-repeat: no-repeat;
+}
+
+.container {
+    padding: 10px 10%;
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Align items in a column */
+    height: 100%; /* Ensure container takes full height */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Make the logo smaller and align it to the left */
+.logo {
+    width: 135px; /* Size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for scaling and other effects */
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg); /* Slightly enlarge and rotate the logo */
+    filter: brightness(1.2); /* Optional: make the logo brighter on hover */
+}
+
+/* Align the navigation menu to the right */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Add space between nav items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #A6F6FF;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    color: #A6F6FF; /* Change color on hover */
+    width: 100%;
+}
+
+.text {
+    display: flex; /* Use Flexbox to align text */
+    flex-direction: column; /* Align text vertically */
+    margin-top: 20%; /* Adjust margin as needed */
+    align-items: flex-start; /* Align text to the start */
+}
+
+.text p {
+    font-size: 30px;
+}
+
+.text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.text h1 span {
+    color: #A6F6FF;
+}
+
+#about {
+    padding: 80px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Ensure space between image and text */
+    align-items: center; /* Vertically center the items */
+    flex-wrap: wrap; /* Wrap content for smaller screens */
+}
+
+.col1 {
+    flex-basis: 55%; /* Adjust this width as needed */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-start; /* Align items to the start (left) */
+    margin-left: -140px; /* Adjust this value to move the image further left */
+}
+
+
+.col1 img {
+    width: 100%; /* Keep the image responsive */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    border-radius: 15px; /* Rounded corners */
+    margin: 0; /* Reset margin */
+    object-fit: cover; /* Ensure the image covers its container proportionally */
+}
+
+
+
+.col2 {
+    flex-basis: 50%; /* Set the text column to take the remaining width */
+    text-align: left; /* Align the text to the right */
+}
+
+
+.subtitle { 
+    font-size: 50px;
+    font-weight: 600;
+    color: #A6F6FF;
+}
+
+.col2 p {
+    color: #fff;
+}
+
+.titles{
+    display: flex;
+    margin: 20px 0px 40px;
+}
+
+.skills{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;  
+}
+
+.skills::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #A6F6FF;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.skills.link1::after{
+    width: 50%;
+}
+
+.tcontents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+/* Color all span elements within tcontents to #A6F6FF */
+.tcontents ul li span {
+    color: #A6F6FF;
+    font-size: 14px;
+}
+.tcontents{
+    display: none;
+}
+.tcontents.at{
+    display: block;
+}
+
+
+
+#services{
+    padding: 30px 0;
+}
+.serlist{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.serlist div{
+    background:#262626 ;
+    padding: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius:10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.serlist div i{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+.serlist  div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.serlist div a {
+    text-decoration: none;
+    color: #fff; /* Default color */
+    font-size: 13px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.serlist div:hover a {
+    color: #080808; /* Change the link color to black when the whole service block is hovered */
+}
+.serlist div:hover {
+    background: #A6F6FF;
+    transform: translateY(-10px);
+    color: #080808;
+}
+
+
+
+#portfolio{
+    padding: 50px 0;
+}
+
+.wlist{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+
+}
+.layer{
+    width: 100%;
+    height: 00%;
+    background: linear-gradient(rgba(0,0,0,0.5), #A6F6FF);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    color: #080808;
+    transition: height 0.5s;
+}
+.work .layer h3{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.work .layer p{
+    font-weight: 500;
+}
+.layer a{
+    margin-top:20px ;
+    color: #A6F6FF;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #080808;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    transition: background 0.3s;
+}
+.work:hover img{
+    transform:scale(1.1) ;
+}
+.work:hover .layer{
+    height: 100%;
+}
+.layer a:hover{
+    background: #fff;
+    color: #080808;
+}
+
+
+
+
+
+
+.cleft{
+    flex-basis: 35%;
+}
+.cright{
+    flex-basis: 60%;
+}
+
+.cleft p{
+    margin-top: 30px;
+}
+.cleft p i{
+    color: #A6F6FF;
+    margin-right:15px ;
+    font-size: 25px;
+}
+.sicons{
+    margin-top: 30px;
+}
+.sicons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #A6F6FF;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.sicons a:hover{
+    color: #fff;
+    transform: translateY(-5px);
+}
+.btn {
+    padding: 15px 20px; /* Ajoutez un padding pour rendre le bouton plus grand */
+    border: none; /* Supprimez la bordure */
+    border-radius: 5px; /* Ajoutez des coins arrondis */
+    font-size: 16px; /* Ajustez la taille de la police */
+    cursor: pointer; /* Changez le curseur au survol */
+    transition: background 0.3s ease, transform 0.3s ease; /* Ajoutez des transitions */
+}
+
+.btn.btn2 {
+    margin: 20px 0;
+    display: inline-block;
+    background: #A6F6FF; /* Couleur de fond initiale */
+    color: #080808; /* Couleur du texte initiale */
+    text-decoration: none;
+}
+
+.btn.btn2:hover {
+    background: #fff; /* Couleur de fond au survol */
+    color: #080808; /* Couleur du texte au survol */
+    transform: translateY(-3px); /* Effet de déplacement au survol */
+}
+
+.cright form{
+    margin-top: 110px;
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copy{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0 ;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copy i{
+    color: #A6F6FF;
+}
+nav .fas{
+    display: none;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    /* Show the hamburger icon */
+    nav .fas {
+        display: block;
+        font-size: 25px;
+        color: #A6F6FF; /* Color of the hamburger icon */
+    }
+
+    /* Style for the navigation menu (right-aligned, with a background) */
+    nav ul {
+        background: #A6F6FF; /* Set background color to light blue */
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px; /* Set the width to 200px */
+        height: 100vh; /* Full screen height */
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+        justify-content: flex-start; /* Align items from the top */
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    /* Style for each menu item */
+    nav ul li {
+        display: block;
+        margin: 25px 0; /* Add space between each menu item */
+        width: 100%; /* Make sure each item takes up full width */
+    }
+
+    /* Menu item links styling */
+    nav ul li a {
+        color: #080808; /* Set the font color to black */
+        text-align: left; /* Align the text to the left */
+        font-size: 16px;
+        padding-left: 20px; /* Add some padding to the left */
+        width: 100%; /* Full width for better touch area */
+    }
+    nav ul .fas{
+        position: absolute;
+        color: #080808;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .subtitle{
+        font-size: 40px;
+
+    }
+    .col1, .col2{
+        flex-basis: 100%;
+    }
+    .row {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Center align items */
+    }
+
+    .col1 {
+        flex-basis: 100%; /* Make the image take full width */
+        margin-left: -150px; /* Reset margin */
+        margin-bottom: 20px; /* Add some space below the image */
+    }
+
+    .col2 {
+        flex-basis: 100%; /* Make the text take full width */
+        text-align: left; 
+        margin-left: -90px;
+    }
+    .cleft, .cright{
+        flex-basis: 100%;
+    }
+    .copy{
+        font-size: 14px;
+    }
+  
+}
+#msg{
+    color: aqua;
+    margin-top: -10px;
+    display: block;
+}
+
+    

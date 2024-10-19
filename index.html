@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio site | slimani heithem teissir</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a556b5397f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                    <a href="index.html"> <img src="pics/logo-no-background.png" class="logo"></a>
+                    <ul id="sidemenu">
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>             
+                    <i class="fas fa-bars" onclick="openmenu()"></i>   
+            </nav>
+            <div class="text">
+                <p>développeur web</p>
+                <h1>Salut,<br>
+                     je suis <span>Teissir</span> <br>d'Algérie.</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <img src="pics/111111.png" >
+                </div>
+                <div class="col2">
+                    <h1 class="subtitle">À propos de moi</h1>
+                    <p>Je m'appelle Teissir, développeur web passionné d'Algérie. J'adore créer des sites modernes et fonctionnels, alliant esthétique et expérience utilisateur. Toujours en quête de nouveaux défis, je m'efforce d'apprendre et de partager mes connaissances dans ce domaine dynamique. 
+                    </p>
+                    <div class="titles">
+                        <p class="skills link1" onclick="opentab(event, 'skill')">Compétences</p>
+                        <p class="skills" onclick="opentab(event, 'exp')">Expérience</p>
+                        <p class="skills" onclick="opentab(event, 'edu')">Éducation</p>                        
+                    </div>
+                    <div class="tcontents at" id="skill">
+                        <ul>
+                            <li><span>développement web</span><br>Développer des sites web modernes et efficaces</li>
+                            <li><span>programmation</span><br>Créer des solutions logicielles optimisées et innovantes</li>                         
+                        </ul>
+                    </div>
+                    <div class="tcontents" id="exp">
+                        <ul>
+                            <li><span>...2024</span><br>En pleine construction d'une expertise en développement web.</li>
+                        </ul>
+                    </div>
+                    <div class="tcontents" id="edu">
+                        <ul>
+                            <li><span>BAC</span> <br> Diplômé avec un bac à 18.17, classé premier à Chelghoum Laïd.</li>
+                            <li><span>ESI</span> <br> Étudiant à l'École Supérieure d'Informatique d'Alger</li>                         
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">Mes services</h1> 
+            <div class="serlist">
+                <div>
+                    <i class="fa-regular fa-file-code"></i> <!-- Example of using a valid free icon -->
+                    <h2>Conception Web</h2>
+                    <p>Développeur web passionné, je crée des sites modernes et fonctionnels, alliant esthétique et expérience utilisateur,
+                         toujours avide d'apprendre.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-laptop"></i> <!-- Valid free icon class -->
+                    <h2>programmation</h2>
+                    <p>
+                        Passionné de programmation, je développe des solutions logicielles innovantes et performantes,
+                         en cherchant constamment à améliorer mes compétences techniques et créatives.</p>
+                </div>                
+            </div>
+        </div>
+    </div>
+ 
+ 
+ 
+ 
+<div id="portfolio">
+    <div class="container">
+            <h1 class="subtitle">Mes Travaux</h1>
+            <div class="wlist">
+                <div class="work">
+                    <img src="pics/9.png" >
+                    <div class="layer">
+                        <h3>site web "Ifone 13"</h3>
+                        <p>Ce site web présente un design moderne et réactif,
+                             mettant en valeur les caractéristiques de l'iPhone 13 avec élégance.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="pics/download (5).jpeg" >
+                    <div class="layer">
+                        <h3>site web "Ralph Lauren"</h3>
+                        <p>Ce site web élégant, dédié à Ralph Lauren,
+                             met en avant des collections de mode iconiques avec un design raffiné et moderne.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+    </div>
+ </div>   
+
+
+
+
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="cleft">
+                <h1 class="subtitle">Me contactez</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>nh_slimani@esi.dz</p>
+                <p><i class="fa-solid fa-phone"></i>+213540500734</p>
+                <div class="sicons">
+                    <a href="https://www.facebook.com/profile.php?id=100094222188742&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/TayssirSli8514?t=cEoU9vYmhByilp-1MJAroQ&s=09"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/tayssir_slimani/profilecard/?igsh=MWdlaXN0NmhjNnNvZg=="><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/slimani-heithemteissir-443a31312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="https://docs.google.com/document/d/15YkiSpho4T78k8LYDSZAIhUm_wav7mhcqxqXjqFLcRI/edit?usp=sharing" class="btn btn2">accéder au cv</a>
+            </div>
+            <div class="cright">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="Votre nom et prenom" required>
+                    <input type="email" name="email" placeholder="Votre email" required>
+                    <textarea  name="message" rows="6" placeholder="Votre message" ></textarea>
+                    <button type="submit" class="btn btn2">soumettre</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="copy">
+        <p>Réalisé par Slimani Heithem Teissir <i class="fa-solid fa-heart"></i> | étudiant à l'ESI</p>
+    </div>
+ </div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("skills");
+    var tabcontents = document.getElementsByClassName("tcontents");
+    function opentab(event, tabname) {
+    var tablinks = document.getElementsByClassName("skills");
+    var tabcontents = document.getElementsByClassName("tcontents");
+
+    for (let tablink of tablinks) {
+        tablink.classList.remove("link1");
+    }
+
+    for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("at");
+    }
+
+    event.currentTarget.classList.add("link1"); // Ajoutez la classe "link1" à l'élément cliqué
+    document.getElementById(tabname).classList.add("at"); // Affichez le contenu associé
+}
+
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxMyvHPIYbz09w94-WysxWMiVXjHvxnpokYEVlJxEcqKIgyX8FB_tkwCOvBcbreJdX0/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Formulaire soumis avec succès"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+    
+</body>
+</html>
